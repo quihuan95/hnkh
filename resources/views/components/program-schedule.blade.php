@@ -21,7 +21,6 @@
                 </div>
               @else
                 <div class="flex items-center">
-                  <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div class="flex-1">
                     <span class="text-gray-800 {{ $item['type'] == 'plenary' || $item['type'] == 'specialized' ? 'font-bold' : 'font-semibold' }}">{{ $item['title'] }}</span>
                     @if (isset($item['description']))

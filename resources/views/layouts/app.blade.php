@@ -71,7 +71,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-green-600 text-white">
+  <footer class="bg-gradient-to-r from-green-300 to-green-400 text-white">
     <div class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Organization Info -->
