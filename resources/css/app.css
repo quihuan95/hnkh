@@ -10,4 +10,21 @@
     --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+
+    /* Custom color palette inspired by Hoan Kiem Lake - Green Theme */
+    --color-nature-green: #16a34a;
+    --color-forest-green: #22c55e;
+    --color-light-green: #4ade80;
+    --color-lake-blue: #1e40af;
+    --color-water-teal: #0d9488;
+    --color-tower-stone: #6b7280;
+}
+
+/* Custom utilities for text shadows */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
