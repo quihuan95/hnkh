@@ -22,7 +22,7 @@ class ConferenceController extends Controller
             [
               'title' => 'Sơ đồ Hội nghị',
               'icon' => 'map',
-              'url' => '#',
+              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
               'description' => 'Bản đồ và hướng dẫn di chuyển trong hội nghị'
             ],
             [
@@ -113,76 +113,93 @@ class ConferenceController extends Controller
         ]
       ],
 
-      'program' => [
-        [
-          'time' => '10:00 - 10:30',
-          'title' => 'Đón tiếp đại biểu',
-          'type' => 'welcome',
-          'description' => 'Đăng ký và đón tiếp các đại biểu tham dự'
-        ],
-        [
-          'time' => '10:30 - 17:00',
-          'title' => 'HỘI NGHỊ KHOA HỌC',
-          'type' => 'main',
-          'description' => 'CHÀO MỪNG KỶ NIỆM 105 NĂM LỊCH SỬ HÌNH THÀNH VÀ 55 NĂM NGÀY SÁP NHẬP BỆNH VIỆN ĐA KHOA XANH PÔN'
-        ],
-        [
-          'time' => '10:30 - 10:45',
-          'title' => 'Khai mạc chương trình',
-          'type' => 'opening',
-          'description' => 'Phát biểu khai mạc và giới thiệu chương trình'
-        ],
-        [
-          'time' => '10:45 - 12:00',
-          'title' => 'PHIÊN KHOA HỌC TOÀN THỂ',
-          'type' => 'plenary',
-          'description' => 'Phiên họp chính với tất cả đại biểu'
-        ],
-        [
-          'time' => '12:00 - 13:30',
-          'title' => 'Nghỉ trưa - Tiệc buffet',
-          'type' => 'break',
-          'description' => 'Nghỉ ngơi và giao lưu giữa các đại biểu'
-        ],
-        [
-          'time' => '13:30 - 17:00',
-          'title' => 'CÁC PHIÊN KHOA HỌC CHUYÊN ĐỀ',
-          'type' => 'specialized',
-          'description' => 'Các phiên họp chuyên đề song song',
-          'sub_sessions' => [
-            'Hội trường 1: Chuyên đề Ngoại khoa 1: Ngoại Tiêu hóa, Ngoại Tiết niệu, Tim mạch lồng ngực',
-            'Hội trường 2: Chuyên đề Ngoại khoa 2: Chấn thương chỉnh hình, Phẫu thuật tạo hình, Phẫu thuật thần kinh',
-            'Hội trường 3: Chuyên đề Nội tổng hợp',
-            'Hội trường 4: Chuyên đề Nội nhi - Ngoại nhi',
-            'Hội trường 5: Chuyên đề Gây mê hồi sức, Hồi sức tích cực & Chống độc',
-            'Hội trường 6: Chuyên đề Chẩn đoán hình ảnh',
-            'Hội trường 7: Chuyên đề Dược lâm sàng',
-            'Hội trường 8: Chuyên đề Điều dưỡng',
-            'Hội trường 9: Chuyên đề Chuyển đổi số'
-          ]
-        ]
-      ],
-
       'sponsors' => [
+        // Diamond Sponsors (KC - Kim Cương)
         [
-          'name' => 'Bệnh viện Đa khoa Xanh Pôn',
-          'logo' => 'https://placehold.co/600x200.png',
-          'type' => 'main'
+          'logo' => 'images/logo/1 kc.png',
+          'name' => 'Nhà tài trợ Kim Cương 1',
+          'category' => 'Diamond Sponsor',
+          'type' => 'diamond'
         ],
         [
-          'name' => 'Bộ Y tế',
-          'logo' => 'https://placehold.co/600x200.png',
-          'type' => 'government'
+          'logo' => 'images/logo/2 kc.png',
+          'name' => 'Nhà tài trợ Kim Cương 2',
+          'category' => 'Diamond Sponsor',
+          'type' => 'diamond'
         ],
         [
-          'name' => 'Hội Y học Dự phòng Việt Nam',
-          'logo' => 'https://placehold.co/600x200.png',
-          'type' => 'association'
+          'logo' => 'images/logo/3 kc.png',
+          'name' => 'Nhà tài trợ Kim Cương 3',
+          'category' => 'Diamond Sponsor',
+          'type' => 'diamond'
+        ],
+
+        // Gold Sponsors (Vàng)
+        [
+          'logo' => 'images/logo/4 vàng.png',
+          'name' => 'Nhà tài trợ Vàng 1',
+          'category' => 'Gold Sponsor',
+          'type' => 'gold'
         ],
         [
-          'name' => 'Đại học Y Hà Nội',
-          'logo' => 'https://placehold.co/600x200.png',
-          'type' => 'university'
+          'logo' => 'images/logo/5 vàng.png',
+          'name' => 'Nhà tài trợ Vàng 2',
+          'category' => 'Gold Sponsor',
+          'type' => 'gold'
+        ],
+        [
+          'logo' => 'images/logo/6 vàng.png',
+          'name' => 'Nhà tài trợ Vàng 3',
+          'category' => 'Gold Sponsor',
+          'type' => 'gold'
+        ],
+
+        // Silver Sponsors (Bạc)
+        [
+          'logo' => 'images/logo/7 bạc.png',
+          'name' => 'Nhà tài trợ Bạc 1',
+          'category' => 'Silver Sponsor',
+          'type' => 'silver'
+        ],
+        [
+          'logo' => 'images/logo/8 bạc.png',
+          'name' => 'Nhà tài trợ Bạc 2',
+          'category' => 'Silver Sponsor',
+          'type' => 'silver'
+        ],
+        [
+          'logo' => 'images/logo/9 bạc.png',
+          'name' => 'Nhà tài trợ Bạc 3',
+          'category' => 'Silver Sponsor',
+          'type' => 'silver'
+        ],
+
+        // Bronze Sponsors (Đồng)
+        [
+          'logo' => 'images/logo/10 đồng.png',
+          'name' => 'Nhà tài trợ Đồng 1',
+          'category' => 'Bronze Sponsor',
+          'type' => 'bronze'
+        ],
+
+        // Copper Sponsors (Đồng TT)
+        [
+          'logo' => 'images/logo/11 đồng tt.png',
+          'name' => 'Nhà tài trợ Đồng TT 1',
+          'category' => 'Copper Sponsor',
+          'type' => 'copper'
+        ],
+        [
+          'logo' => 'images/logo/12 đồng tt.png',
+          'name' => 'Nhà tài trợ Đồng TT 2',
+          'category' => 'Copper Sponsor',
+          'type' => 'copper'
+        ],
+        [
+          'logo' => 'images/logo/13 đồng tt.png',
+          'name' => 'Nhà tài trợ Đồng TT 3',
+          'category' => 'Copper Sponsor',
+          'type' => 'copper'
         ]
       ]
     ];

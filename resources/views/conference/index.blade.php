@@ -6,6 +6,6 @@
 @section('content')
   @include('components.hero-section')
   @include('components.conference-sections')
-  @include('components.program-schedule')
+  {{-- @include('components.program-schedule') --}}
   @include('components.sponsors-section')
 @endsection
