@@ -1,7 +1,7 @@
 <!-- Hero Section -->
 <section class="relative">
   <div class="relative">
-    <img src="{{ asset('storage/images/header_banner.jpg') }}" alt="Header Banner" class="w-full h-auto">
+    <img src="{{ asset('images/header_banenr.jpg') }}" alt="Header Banner" class="w-full h-auto">
     <!-- Overlay for better text readability -->
     {{-- <div class="absolute inset-0 bg-gradient-to-t from-blue-800/50 via-transparent to-transparent"></div> --}}
 
