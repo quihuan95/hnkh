@@ -70,43 +70,43 @@ class ConferenceController extends Controller
             [
               'title' => 'Phiên toàn thể: Tổng quan về Y học dự phòng',
               'icon' => 'users',
-              'url' => '#',
+              'url' => 'images/conference/2. Phiên toàn thể.jpg',
               'description' => 'Phiên họp chính với tất cả đại biểu'
             ],
             [
               'title' => 'Phiên chuyên đề 1: Vắc xin và phòng bệnh bằng vắc xin',
               'icon' => 'shield',
-              'url' => '#',
+              'url' => 'images/conference/chuyên đề 1.pdf',
               'description' => 'Chuyên đề về vắc xin và phòng chống bệnh tật'
             ],
             [
               'title' => 'Phiên chuyên đề 2: Bệnh truyền nhiễm, bệnh mới nổi',
               'icon' => 'alert-triangle',
-              'url' => '#',
+              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg',
               'description' => 'Thảo luận về các bệnh truyền nhiễm và mới nổi'
             ],
             [
               'title' => 'Phiên chuyên đề 3: Bệnh không lây nhiễm, dinh dưỡng',
               'icon' => 'heart',
-              'url' => '#',
+              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg',
               'description' => 'Chuyên đề về bệnh không lây và dinh dưỡng'
             ],
             [
               'title' => 'Phiên chuyên đề 4: Sức khỏe nghề nghiệp và môi trường',
               'icon' => 'leaf',
-              'url' => '#',
+              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg',
               'description' => 'Sức khỏe nghề nghiệp và tác động môi trường'
             ],
             [
               'title' => 'Phiên chuyên đề 5: Đào tạo Y học dự phòng',
               'icon' => 'graduation-cap',
-              'url' => '#',
+              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg',
               'description' => 'Đào tạo và phát triển nguồn nhân lực'
             ],
             [
               'title' => 'Phiên chuyên đề 6: Trình bày Poster',
               'icon' => 'image',
-              'url' => '#',
+              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg',
               'description' => 'Triển lãm và trình bày các nghiên cứu'
             ]
           ]
