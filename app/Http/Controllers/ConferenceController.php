@@ -16,39 +16,51 @@ class ConferenceController extends Controller
 
       'sections' => [
         [
-          'title' => 'Thông tin chung',
+          'title' => 'Đăng ký tham dự',
+          'icon' => 'document',
+          'items' => [
+            [
+              'title' => 'Đăng ký tham dự',
+              'icon' => 'file-text',
+              'url' => 'https://docs.google.com/forms/u/0/d/1bhejTLqRdO1txFF61t3dhZssdo1RvRs6Xm_zZnyzarw/viewform?usp=drive_web&edit_requested=true',
+              'description' => 'Đăng ký tham dự tại đây'
+            ],
+          ]
+        ],
+        [
+          'title' => 'Hướng dẫn',
           'icon' => 'info',
           'items' => [
             [
-              'title' => 'Sơ đồ Hội nghị',
-              'icon' => 'map',
-              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
-              'description' => 'Bản đồ và hướng dẫn di chuyển trong hội nghị'
+              'title' => 'Hướng dẫn chung',
+              'icon' => 'guide',
+              'url' => '#',
+              'description' => 'Quy trình check-in tham dự hội nghị'
             ],
             [
               'title' => 'Hướng dẫn tham dự hội nghị',
               'icon' => 'guide',
               'url' => '#',
-              'description' => 'Quy trình đăng ký và tham dự hội nghị'
+              'description' => 'Hướng dẫn cho chủ tọa, báo cáo viên, thư ký'
             ],
             [
               'title' => 'Địa điểm tổ chức',
               'icon' => 'location',
               'url' => '#',
               'description' => 'Thông tin chi tiết về địa điểm tổ chức'
+            ],
+            [
+              'title' => 'Sơ đồ Hội nghị',
+              'icon' => 'map',
+              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
+              'description' => 'Bản đồ và hướng dẫn di chuyển trong hội nghị'
             ]
           ]
         ],
         [
-          'title' => 'Chương trình và tài liệu hội nghị',
+          'title' => 'Tài liệu hội nghị',
           'icon' => 'document',
           'items' => [
-            [
-              'title' => 'Tài liệu tóm tắt nội dung Hội nghị',
-              'icon' => 'file-text',
-              'url' => '#',
-              'description' => 'Tài liệu tổng hợp các nội dung chính'
-            ],
             [
               'title' => 'Chương trình tổng thể',
               'icon' => 'calendar',
@@ -60,6 +72,12 @@ class ConferenceController extends Controller
               'icon' => 'list',
               'url' => '#',
               'description' => 'Chi tiết từng phiên họp và hoạt động'
+            ],
+            [
+              'title' => 'Tài liệu tóm tắt nội dung Hội nghị',
+              'icon' => 'file-text',
+              'url' => '#',
+              'description' => 'Tài liệu tổng hợp các nội dung chính'
             ]
           ]
         ],

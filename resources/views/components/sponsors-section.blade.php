@@ -26,7 +26,15 @@
         <div class="mb-12">
           <div class="text-center mb-8">
             <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ $config['name'] }}</h3>
-            <div class="w-24 h-px bg-{{ $config['color'] }}-500 mx-auto"></div>
+            <div class="w-24 h-[2px] mx-auto"
+              style="background-color: @switch($config['color'])
+              @case('purple') #8b5cf6 @break
+              @case('yellow') #eab308 @break
+              @case('gray') #6b7280 @break
+              @case('orange') #f97316 @break
+              @case('green') #22c55e @break
+            @endswitch">
+            </div>
           </div>
 
           <!-- Sponsors Grid -->
