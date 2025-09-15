@@ -34,26 +34,22 @@ class ConferenceController extends Controller
             [
               'title' => 'Hướng dẫn chung',
               'icon' => 'guide',
-              'url' => '#',
-              'description' => 'Quy trình check-in tham dự hội nghị'
+              'url' => '#'
             ],
             [
               'title' => 'Hướng dẫn tham dự hội nghị',
               'icon' => 'guide',
-              'url' => '#',
-              'description' => 'Hướng dẫn cho chủ tọa, báo cáo viên, thư ký'
+              'url' => '#'
             ],
             [
               'title' => 'Địa điểm tổ chức',
               'icon' => 'location',
-              'url' => '#',
-              'description' => 'Thông tin chi tiết về địa điểm tổ chức'
+              'url' => '#'
             ],
             [
               'title' => 'Sơ đồ Hội nghị',
               'icon' => 'map',
-              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
-              'description' => 'Bản đồ và hướng dẫn di chuyển trong hội nghị'
+              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf'
             ]
           ]
         ],
@@ -64,20 +60,17 @@ class ConferenceController extends Controller
             [
               'title' => 'Chương trình tổng thể',
               'icon' => 'calendar',
-              'url' => '#',
-              'description' => 'Lịch trình tổng quan của hội nghị'
+              'url' => '#'
             ],
             [
               'title' => 'Chương trình chi tiết',
               'icon' => 'list',
-              'url' => '#',
-              'description' => 'Chi tiết từng phiên họp và hoạt động'
+              'url' => '#'
             ],
             [
               'title' => 'Tài liệu tóm tắt nội dung Hội nghị',
               'icon' => 'file-text',
-              'url' => '#',
-              'description' => 'Tài liệu tổng hợp các nội dung chính'
+              'url' => '#'
             ]
           ]
         ],
@@ -88,44 +81,37 @@ class ConferenceController extends Controller
             [
               'title' => 'Phiên toàn thể: Tổng quan về Y học dự phòng',
               'icon' => 'users',
-              'url' => 'images/conference/2. Phiên toàn thể.jpg',
-              'description' => 'Phiên họp chính với tất cả đại biểu'
+              'url' => 'images/conference/2. Phiên toàn thể.jpg'
             ],
             [
               'title' => 'Phiên chuyên đề 1: Vắc xin và phòng bệnh bằng vắc xin',
               'icon' => 'shield',
-              'url' => 'images/conference/chuyên đề 1.pdf',
-              'description' => 'Chuyên đề về vắc xin và phòng chống bệnh tật'
+              'url' => 'images/conference/chuyên đề 1.pdf'
             ],
             [
               'title' => 'Phiên chuyên đề 2: Bệnh truyền nhiễm, bệnh mới nổi',
               'icon' => 'alert-triangle',
-              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg',
-              'description' => 'Thảo luận về các bệnh truyền nhiễm và mới nổi'
+              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg'
             ],
             [
               'title' => 'Phiên chuyên đề 3: Bệnh không lây nhiễm, dinh dưỡng',
               'icon' => 'heart',
-              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg',
-              'description' => 'Chuyên đề về bệnh không lây và dinh dưỡng'
+              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg'
             ],
             [
               'title' => 'Phiên chuyên đề 4: Sức khỏe nghề nghiệp và môi trường',
               'icon' => 'leaf',
-              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg',
-              'description' => 'Sức khỏe nghề nghiệp và tác động môi trường'
+              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg'
             ],
             [
               'title' => 'Phiên chuyên đề 5: Đào tạo Y học dự phòng',
               'icon' => 'graduation-cap',
-              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg',
-              'description' => 'Đào tạo và phát triển nguồn nhân lực'
+              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg'
             ],
             [
               'title' => 'Phiên chuyên đề 6: Trình bày Poster',
               'icon' => 'image',
-              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg',
-              'description' => 'Triển lãm và trình bày các nghiên cứu'
+              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg'
             ]
           ]
         ]
