@@ -24,6 +24,8 @@
 </head>
 
 <body class="font-sans antialiased bg-green-50">
+  {{-- Header --}}
+  @include('components.conference-header')
   <!-- Main Content -->
   <main class="min-h-screen">
     @yield('content')

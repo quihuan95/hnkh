@@ -37,14 +37,19 @@ class ConferenceController extends Controller
               'url' => '#'
             ],
             [
-              'title' => 'Hướng dẫn tham dự hội nghị',
+              'title' => 'Hướng dẫn Tham dự Lễ Kỉ niệm (02/10/2025)',
+              'icon' => 'guide',
+              'url' => '#'
+            ],
+            [
+              'title' => 'Hướng dẫn Tham dự Hội nghị khoa học (03/10/2025)',
               'icon' => 'guide',
               'url' => '#'
             ],
             [
               'title' => 'Địa điểm tổ chức',
               'icon' => 'location',
-              'url' => '#'
+              'url' => 'https://maps.app.goo.gl/CGmGQQmDJN461y5eA'
             ],
             [
               'title' => 'Sơ đồ Hội nghị',

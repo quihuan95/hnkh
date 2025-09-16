@@ -1,17 +1,19 @@
 <!-- Conference Sections -->
-<section id="sections" class="py-16 bg-green-300 relative">
+<section id="sections" class="relative">
   <!-- Background Image with Picture Element for Responsive Design -->
-  <picture class="absolute inset-0 w-full h-full z-0">
+  <picture class="absolute inset-0 w-full h-full z-0 blur-[2px]">
     <!-- Mobile (up to 640px) -->
-    <source media="(max-width: 640px)" srcset="{{ asset('images/header_banenr_mobile.jpg') }}">
+    <source media="(max-width: 640px)" srcset="{{ asset('images/header_banenr_mobile.png') }}">
     <!-- Tablet (641px to 1024px) -->
-    <source media="(max-width: 1024px)" srcset="{{ asset('images/header_banenr.jpg') }}">
-    <img src="{{ asset('images/header_banenr.jpg') }}" alt="Conference Background" class="w-full h-full object-cover object-center"
+    <source media="(max-width: 1024px)" srcset="{{ asset('images/header_banenr.png') }}">
+    <img src="{{ asset('images/header_banenr.png') }}" alt="Conference Background" class="w-full h-full object-cover object-center"
       style="background-size: cover; background-position: center; background-repeat: no-repeat;">
   </picture>
 
+  <div class="absolute inset-0 w-full h-full z-0 bg-white opacity-50"></div>
+
   <!-- Content Container -->
-  <div class="container mx-auto px-4 relative z-10 pt-16">
+  <div class="container mx-auto px-4 relative z-10">
     <div class="rounded-lg p-6">
       @foreach ($conferenceData['sections'] as $section)
         <div class="bg-transparent p-6 text-gray-900">
@@ -274,10 +276,10 @@
 
       if (width <= 640) {
         // Mobile
-        imageSrc = "{{ asset('images/header_banenr_mobile.jpg') }}";
+        imageSrc = "{{ asset('images/header_banenr_mobile.png') }}";
       } else {
         // Tablet
-        imageSrc = "{{ asset('images/header_banenr.jpg') }}";
+        imageSrc = "{{ asset('images/header_banenr.png') }}";
       }
 
       // Update the img src
