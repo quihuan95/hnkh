@@ -23,6 +23,7 @@ class ConferenceController extends Controller
               'title' => 'Đăng ký tham dự',
               'icon' => 'file-text',
               'url' => 'https://docs.google.com/forms/u/0/d/1bhejTLqRdO1txFF61t3dhZssdo1RvRs6Xm_zZnyzarw/viewform?usp=drive_web&edit_requested=true',
+              'type' => 'url',
               'description' => 'Đăng ký tham dự tại đây'
             ],
           ]
@@ -34,27 +35,32 @@ class ConferenceController extends Controller
             [
               'title' => 'Hướng dẫn chung',
               'icon' => 'guide',
-              'url' => '#'
+              'url' => 'files/Sổ tay đại biểu danh dự HNKH 2025.pdf',
+              'type' => 'file'
             ],
             [
               'title' => 'Hướng dẫn Tham dự Lễ Kỉ niệm (02/10/2025)',
               'icon' => 'guide',
-              'url' => '#'
+              'url' => 'files/Sổ tay hướng dẫn đại biểu tham dự LKN 2.10.2025.pdf',
+              'type' => 'file'
             ],
             [
               'title' => 'Hướng dẫn Tham dự Hội nghị khoa học (03/10/2025)',
               'icon' => 'guide',
-              'url' => '#'
+              'url' => 'files/Sổ tay hướng dẫn đại biểu tham dự HNKH 2025.pdf',
+              'type' => 'file'
             ],
             [
               'title' => 'Địa điểm tổ chức',
               'icon' => 'location',
-              'url' => 'https://maps.app.goo.gl/CGmGQQmDJN461y5eA'
+              'url' => 'https://maps.app.goo.gl/CGmGQQmDJN461y5eA',
+              'type' => 'url'
             ],
             [
               'title' => 'Sơ đồ Hội nghị',
               'icon' => 'map',
-              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf'
+              'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
+              'type' => 'file'
             ]
           ]
         ],
@@ -86,37 +92,44 @@ class ConferenceController extends Controller
             [
               'title' => 'Phiên toàn thể: Tổng quan về Y học dự phòng',
               'icon' => 'users',
-              'url' => 'images/conference/2. Phiên toàn thể.jpg'
+              'url' => 'images/conference/2. Phiên toàn thể.jpg',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 1: Vắc xin và phòng bệnh bằng vắc xin',
               'icon' => 'shield',
-              'url' => 'images/conference/chuyên đề 1.pdf'
+              'url' => 'images/conference/chuyên đề 1.pdf',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 2: Bệnh truyền nhiễm, bệnh mới nổi',
               'icon' => 'alert-triangle',
-              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg'
+              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 3: Bệnh không lây nhiễm, dinh dưỡng',
               'icon' => 'heart',
-              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg'
+              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 4: Sức khỏe nghề nghiệp và môi trường',
               'icon' => 'leaf',
-              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg'
+              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 5: Đào tạo Y học dự phòng',
               'icon' => 'graduation-cap',
-              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg'
+              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg',
+              'type' => 'file'
             ],
             [
               'title' => 'Phiên chuyên đề 6: Trình bày Poster',
               'icon' => 'image',
-              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg'
+              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg',
+              'type' => 'file'
             ]
           ]
         ]
