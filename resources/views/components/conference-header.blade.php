@@ -25,19 +25,20 @@
     </div>
 
     <!-- Main Text Content -->
-    <div class="text-center space-y-6">
+    <div class="text-center">
       <!-- First Line -->
-      <h1 class="text-4xl md:text-4xl font-bold text-blue-800 leading-tight">
+      <h1 class="text-4xl md:text-4xl font-bold text-blue-800 leading-relaxed">
+        LỄ KỶ NIỆM 80 NĂM NGÀY TRUYỀN THỐNG VIỆN VỆ SINH DỊCH TỄ TRUNG ƯƠNG (03/10/1945 – 03/10/2025)
+        <br>
         HỘI NGHỊ KHOA HỌC Y HỌC DỰ PHÒNG TOÀN QUỐC NĂM 2025
       </h1>
-
       <!-- Third Line -->
-      <h3 class="text-3xl md:text-4xl font-bold text-green-600 leading-tight">
+      <h3 class="text-3xl md:text-4xl font-bold text-green-600 mt-1">
         CHUNG TAY VÌ SỨC KHỎE CỘNG ĐỒNG
       </h3>
 
       <!-- Fourth Line -->
-      <p class="text-xl md:text-xl text-blue-800 font-semibold mt-8">
+      <p class="text-xl md:text-xl text-blue-800 font-semibold mt-4">
         HÀ NỘI, NGÀY 2-3 THÁNG 10 NĂM 2025
       </p>
     </div>
