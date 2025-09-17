@@ -33,16 +33,16 @@ class ConferenceController extends Controller
           'icon' => 'info',
           'items' => [
             [
-              'title' => 'Hướng dẫn chung',
-              'icon' => 'guide',
-              'url' => 'files/Sổ tay đại biểu danh dự HNKH 2025.pdf',
-              'type' => 'file'
-            ],
-            [
               'title' => 'Hướng dẫn Tham dự Lễ Kỉ niệm (02/10/2025)',
               'icon' => 'guide',
               'url' => 'files/Sổ tay hướng dẫn đại biểu tham dự LKN 2.10.2025.pdf',
               'type' => 'file'
+            ],
+            [
+              'title' => 'Địa điểm',
+              'icon' => 'map',
+              'url' => 'https://maps.app.goo.gl/HR6Tj5SqEPfJFms97',
+              'type' => 'url'
             ],
             [
               'title' => 'Hướng dẫn Tham dự Hội nghị khoa học (03/10/2025)',
@@ -51,15 +51,21 @@ class ConferenceController extends Controller
               'type' => 'file'
             ],
             [
-              'title' => 'Địa điểm tổ chức',
+              'title' => 'Địa điểm',
               'icon' => 'location',
               'url' => 'https://maps.app.goo.gl/CGmGQQmDJN461y5eA',
               'type' => 'url'
             ],
             [
-              'title' => 'Sơ đồ Hội nghị',
+              'title' => 'Sơ đồ Hội trường',
               'icon' => 'map',
               'url' => 'files/SƠ ĐỒ MẶT BẰNG - Y HỌC DỰ PHÒNG 2025.pdf',
+              'type' => 'file'
+            ],
+            [
+              'title' => 'Hướng dẫn Tham Dự Chủ tọa | Báo cáo viên',
+              'icon' => 'map',
+              'url' => 'files/Sổ tay đại biểu danh dự HNKH 2025.pdf',
               'type' => 'file'
             ]
           ]
@@ -74,62 +80,46 @@ class ConferenceController extends Controller
               'url' => '#'
             ],
             [
-              'title' => 'Chương trình chi tiết',
+              'title' => 'Chương trình Lễ Kỉ niệm (02/10/2025)',
               'icon' => 'list',
               'url' => '#'
             ],
             [
-              'title' => 'Tài liệu tóm tắt nội dung Hội nghị',
+              'title' => 'Chương trình Hội nghị khoa học (03/10/2025)',
               'icon' => 'file-text',
               'url' => '#'
             ]
           ]
         ],
         [
-          'title' => 'Hội trường',
+          'title' => 'Tài liệu',
           'icon' => 'building',
           'items' => [
             [
-              'title' => 'Phiên toàn thể: Tổng quan về Y học dự phòng',
+              'title' => 'Lễ Kỉ niệm',
               'icon' => 'users',
               'url' => 'images/conference/2. Phiên toàn thể.jpg',
               'type' => 'file'
             ],
             [
-              'title' => 'Phiên chuyên đề 1: Vắc xin và phòng bệnh bằng vắc xin',
+              'title' => 'Hội nghị khoa học',
               'icon' => 'shield',
               'url' => 'images/conference/chuyên đề 1.pdf',
-              'type' => 'file'
-            ],
-            [
-              'title' => 'Phiên chuyên đề 2: Bệnh truyền nhiễm, bệnh mới nổi',
-              'icon' => 'alert-triangle',
-              'url' => 'images/conference/CHUYÊN ĐỀ 2.jpg',
-              'type' => 'file'
-            ],
-            [
-              'title' => 'Phiên chuyên đề 3: Bệnh không lây nhiễm, dinh dưỡng',
-              'icon' => 'heart',
-              'url' => 'images/conference/CHUYÊN ĐỀ 3.jpg',
-              'type' => 'file'
-            ],
-            [
-              'title' => 'Phiên chuyên đề 4: Sức khỏe nghề nghiệp và môi trường',
-              'icon' => 'leaf',
-              'url' => 'images/conference/CHUYÊN ĐỀ 4.jpg',
-              'type' => 'file'
-            ],
-            [
-              'title' => 'Phiên chuyên đề 5: Đào tạo Y học dự phòng',
-              'icon' => 'graduation-cap',
-              'url' => 'images/conference/CHUYÊN ĐỀ 5.jpg',
-              'type' => 'file'
-            ],
-            [
-              'title' => 'Phiên chuyên đề 6: Trình bày Poster',
-              'icon' => 'image',
-              'url' => 'images/conference/CHUYÊN ĐỀ 6.jpg',
-              'type' => 'file'
+              'type' => 'file',
+              'children' => [
+                [
+                  'title' => '1. Tóm tắt',
+                  'icon' => 'shield',
+                  'url' => '#',
+                  'type' => 'file',
+                ],
+                [
+                  'title' => '2. Toàn văn',
+                  'icon' => 'shield',
+                  'url' => '#',
+                  'type' => 'file',
+                ],
+              ]
             ]
           ]
         ]

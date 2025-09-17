@@ -18,10 +18,10 @@
       @foreach ($conferenceData['sections'] as $section)
         <div class="bg-transparent p-6 text-gray-900">
           <h3 class="text-xl font-bold tracking-wide mb-6 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-4 py-2 w-fit">{{ $section['title'] }}</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             @foreach ($section['items'] as $item)
               @if ($item['url'] != '#')
-                <div class="block">
+                <div class="block" x-data="{ open: false }">
                   <div class="flex items-center justify-start gap-3">
                     <div class="flex-shrink-0 mt-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full p-2">
                       @switch($item['icon'])
@@ -138,54 +138,69 @@
                     <!-- Action Icons -->
                     <div class="flex items-center gap-2">
                       @if (isset($item['type']))
-                        @if ($item['type'] === 'url')
-                          <!-- External Link Icon for URLs -->
-                          <a target="_blank" href="{{ $item['url'] }}" class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
-                            title="Mở liên kết">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                          </a>
-                        @elseif($item['type'] === 'file')
-                          <!-- View Icon for Files -->
-                          <a target="_blank" href="{{ asset($item['url']) }}" class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
-                            title="Xem trước">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                            </svg>
-                          </a>
-                          <!-- Download Icon for Files -->
-                          <a href="{{ asset($item['url']) }}" download class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
-                            title="Tải xuống">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                          </a>
-                        @endif
-                      @else
-                        <!-- Fallback: Show both icons if type is not specified -->
-                        <a target="_blank" href="{{ asset($item['url']) }}" class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
-                          title="Xem trước">
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                          </svg>
-                        </a>
-                        <a href="{{ asset($item['url']) }}" download class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
-                          title="Tải xuống">
+                        <a target="_blank" href="{{ $item['url'] }}" class="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
+                          title="Mở liên kết">
                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                           </svg>
                         </a>
                       @endif
+
+                      <!-- Dropdown Toggle Button (only show if has children) -->
+                      @if (isset($item['children']) && count($item['children']) > 0)
+                        <button @click="open = !open" class="p-2 bg-gray-500 hover:bg-gray-600 text-white rounded-full transition-colors duration-200" title="Xem thêm">
+                          <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                        </button>
+                      @endif
                     </div>
                   </div>
+
+                  <!-- Dropdown Content -->
+                  @if (isset($item['children']) && count($item['children']) > 0)
+                    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95"
+                      x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150"
+                      x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-3 ml-12 space-y-2">
+                      @foreach ($item['children'] as $child)
+                        <div class="flex items-center gap-3 p-2 bg-green-50 rounded-lg">
+                          <div class="flex-1">
+                            <h5 class="text-gray-900 font-semibold text-sm">{{ $child['title'] }}</h5>
+                          </div>
+                          @if ($child['url'] != '#')
+                            <div class="flex items-center gap-1">
+                              @if ($child['type'] === 'file')
+                                <a target="_blank" href="{{ asset($child['url']) }}"
+                                  class="p-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200" title="Xem trước">
+                                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                  </svg>
+                                </a>
+                                <a href="{{ asset($child['url']) }}" download class="p-1.5 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors duration-200"
+                                  title="Tải xuống">
+                                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                  </svg>
+                                </a>
+                              @else
+                                <a target="_blank" href="{{ $child['url'] }}" class="p-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors duration-200"
+                                  title="Mở liên kết">
+                                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                  </svg>
+                                </a>
+                              @endif
+                            </div>
+                          @endif
+                        </div>
+                      @endforeach
+                    </div>
+                  @endif
                 </div>
               @else
                 <div class="block">
