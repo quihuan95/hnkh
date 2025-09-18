@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Hội nghị Khoa học - Bệnh viện Đa khoa Xanh Pôn')
-@section('description', 'Hội nghị Khoa học chào mừng kỷ niệm 105 năm lịch sử hình thành và 55 năm ngày sáp nhập Bệnh viện Đa khoa Xanh Pôn')
+@section('title', 'Hội Nghị Khoa Học Y Học Dự Phòng Toàn Quốc Năm 2025')
+@section('description', 'Lễ Kỷ Niệm 80 Năm Ngày Truyền Thống Viện Vệ Sinh Dịch Tễ Trung Ương & Hội Nghị Khoa Học Y Học
+Dự Phòng Toàn Quốc Năm 2025')
 
 @section('content')
-  {{-- @include('components.hero-section') --}}
-  @include('components.conference-sections')
-  {{-- @include('components.program-schedule') --}}
-  @include('components.sponsors-section')
+{{-- @include('components.hero-section') --}}
+@include('components.conference-sections')
+{{-- @include('components.program-schedule') --}}
+@include('components.sponsors-section')
 @endsection
