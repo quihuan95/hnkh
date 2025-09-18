@@ -77,7 +77,7 @@ class ConferenceController extends Controller
             [
               'title' => 'Chương trình tổng thể',
               'icon' => 'calendar',
-              'url' => 'files/Thu moi EVENT_Hoi YHDP_Digital_0917_ 3.pdf'
+              'url' => 'files/Thu moi EVENT_Hoi YHDP_0918_v3.pdf'
             ],
             [
               'title' => 'Chương trình Lễ Kỉ niệm (02/10/2025)',
