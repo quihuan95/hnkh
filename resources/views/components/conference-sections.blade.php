@@ -351,7 +351,9 @@
                 @endswitch
               </div>
               <div class="flex-1">
-                <h4 class="text-gray-800 font-semibold underline">{{ $item['title'] }}</h4>
+                <a href="{{ $item['url'] }}">
+                  <h4 class="text-gray-800 font-semibold underline">{{ $item['title'] }}</h4>
+                </a>
               </div>
             </div>
           </div>
