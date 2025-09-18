@@ -14,12 +14,12 @@
   {{-- <div class="absolute inset-0 w-full h-full z-0 bg-white opacity-50"></div> --}}
 
   <!-- Content Container -->
-  <div class="container mx-auto px-4 relative z-10">
-    <div class="rounded-lg p-6">
+  <div class="container mx-auto px-4 relative z-10 pb-60">
+    <div class="rounded-lg md:p-6 p-3">
       @foreach ($conferenceData['sections'] as $section)
-      <div class="bg-transparent p-6 text-gray-900">
+      <div class="bg-transparent md:p-6 p-3 text-gray-900">
         <h3
-          class="text-xl font-bold tracking-wide mb-6 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-4 py-2 w-fit">
+          class="md:text-xl text-sm font-bold tracking-wide mb-6 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full px-4 py-2 w-fit">
           {{ $section['title'] }}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           @foreach ($section['items'] as $item)
@@ -146,7 +146,7 @@
               </div>
               <div class="w-fit">
                 <a href="{{ $item['url'] }}">
-                  <h4 class="text-gray-800 font-semibold underline">{{ $item['title'] }}</h4>
+                  <h4 class="text-gray-800 font-semibold underline md:text-md text-sm">{{ $item['title'] }}</h4>
                 </a>
               </div>
               <!-- Action Icons -->
@@ -352,7 +352,8 @@
               </div>
               <div class="flex-1">
                 <a href="{{ $item['url'] }}">
-                  <h4 class="text-gray-800 font-semibold underline">{{ $item['title'] }}</h4>
+                  <h4 class="text-gray-800 font-semibold underline md:text-md text-sm">{{ $item['title'] }}
+                  </h4>
                 </a>
               </div>
             </div>
