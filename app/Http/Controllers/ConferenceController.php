@@ -71,7 +71,7 @@ class ConferenceController extends Controller
           ]
         ],
         [
-          'title' => 'Tài liệu hội nghị',
+          'title' => 'Chương trình',
           'icon' => 'document',
           'items' => [
             [
