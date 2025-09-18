@@ -81,12 +81,12 @@ class ConferenceController extends Controller
             ],
             [
               'title' => 'Chương trình Lễ Kỉ niệm (02/10/2025)',
-              'icon' => 'list',
+              'icon' => 'calendar',
               'url' => '#'
             ],
             [
               'title' => 'Chương trình Hội nghị khoa học (03/10/2025)',
-              'icon' => 'file-text',
+              'icon' => 'calendar',
               'url' => '#'
             ]
           ]
@@ -97,13 +97,13 @@ class ConferenceController extends Controller
           'items' => [
             [
               'title' => 'Lễ Kỉ niệm',
-              'icon' => 'users',
+              'icon' => 'file',
               'url' => 'images/conference/2. Phiên toàn thể.jpg',
               'type' => 'file'
             ],
             [
               'title' => 'Hội nghị khoa học',
-              'icon' => 'shield',
+              'icon' => 'file',
               'url' => 'images/conference/chuyên đề 1.pdf',
               'type' => 'file',
               'children' => [
