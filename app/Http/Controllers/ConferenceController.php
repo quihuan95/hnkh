@@ -87,7 +87,7 @@ class ConferenceController extends Controller
             [
               'title' => 'Chương trình Hội nghị khoa học (03/10/2025)',
               'icon' => 'calendar',
-              'url' => 'files/Chương trình hội nghị khoa học 3.10.pdf'
+              'url' => 'files/Chương trình Hội nghị khoa học 3.10.pdf'
             ]
           ]
         ],
