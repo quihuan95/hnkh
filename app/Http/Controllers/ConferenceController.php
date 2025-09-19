@@ -65,7 +65,7 @@ class ConferenceController extends Controller
             [
               'title' => 'Hướng dẫn Tham Dự Chủ tọa | Báo cáo viên',
               'icon' => 'map',
-              'url' => 'files/Sổ tay đại biểu danh dự HNKH 2025.pdf',
+              'url' => 'files/HNKH YHDP 2025_Vai tro dieu hanh cac phien HNKH.pdf',
               'type' => 'file'
             ]
           ]
@@ -82,12 +82,12 @@ class ConferenceController extends Controller
             [
               'title' => 'Chương trình Lễ Kỉ niệm (02/10/2025)',
               'icon' => 'calendar',
-              'url' => '#'
+              'url' => 'files/Chương trình lễ kỷ niệm 2.10.pdf'
             ],
             [
               'title' => 'Chương trình Hội nghị khoa học (03/10/2025)',
               'icon' => 'calendar',
-              'url' => '#'
+              'url' => 'files/Chương trình hội nghị khoa học 3.10.pdf'
             ]
           ]
         ],
