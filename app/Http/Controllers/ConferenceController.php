@@ -104,8 +104,8 @@ class ConferenceController extends Controller
             [
               'title' => 'Hội nghị khoa học',
               'icon' => 'file',
-              'url' => 'images/conference/chuyên đề 1.pdf',
-              'type' => 'file',
+              'url' => '#',
+              'type' => 'parent',
               'children' => [
                 [
                   'title' => '1. Tóm tắt',
