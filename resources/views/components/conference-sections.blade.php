@@ -187,7 +187,8 @@
               @foreach ($item['children'] as $child)
               <div class="flex items-center gap-3 p-2 bg-green-50 rounded-lg">
                 <div class="flex-1">
-                  <h5 class="text-gray-900 font-semibold text-sm">{{ $child['title'] }}</h5>
+                  <a target="_blank" href="{{ asset($child['url']) }}" <h5
+                    class="text-gray-900 font-semibold text-sm">{{ $child['title'] }}</h5></a>
                 </div>
                 @if ($child['url'] != '#')
                 <div class="flex items-center gap-1">
