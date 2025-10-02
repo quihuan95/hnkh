@@ -3,12 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ConferenceController extends Controller
 {
   public function index()
   {
-    $conferenceData = [
+    // Cache conference data for 24 hours
+    $conferenceData = Cache::remember('conference_data', 86400, function () {
+      return $this->getConferenceData();
+    });
+
+    return view('conference.index', compact('conferenceData'));
+  }
+
+  private function getConferenceData()
+  {
+    return [
       'title' => 'HỘI NGHỊ KHOA HỌC',
       'subtitle' => 'CHÀO MỪNG KỶ NIỆM 105 NĂM LỊCH SỬ HÌNH THÀNH VÀ 55 NĂM NGÀY SÁP NHẬP BỆNH VIỆN ĐA KHOA XANH PÔN',
       'date' => 'Ngày 15-16 tháng 12 năm 2024',
@@ -215,7 +226,12 @@ class ConferenceController extends Controller
         ]
       ]
     ];
+  }
 
-    return view('conference.index', compact('conferenceData'));
+  public function clearCache()
+  {
+    Cache::forget('conference_data');
+    Cache::forget('file_metadata');
+    return response()->json(['message' => 'Cache cleared successfully']);
   }
 }

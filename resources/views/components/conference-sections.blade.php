@@ -3,10 +3,10 @@
   <!-- Background Image with Picture Element for Responsive Design -->
   <picture class="absolute inset-0 w-full h-full z-0">
     <!-- Mobile (up to 640px) -->
-    <source media="(max-width: 640px)" srcset="{{ asset('images/header_banenr_mobile.png') }}">
+    <source media="(max-width: 640px)" srcset="{{ \App\Services\FileCacheService::getAssetUrl('images/header_banenr_mobile.png') }}">
     <!-- Tablet (641px to 1024px) -->
-    <source media="(max-width: 1024px)" srcset="{{ asset('images/header_banenr.png') }}">
-    <img src="{{ asset('images/header_banenr.png') }}" alt="Conference Background" class="w-full h-full object-cover object-center"
+    <source media="(max-width: 1024px)" srcset="{{ \App\Services\FileCacheService::getAssetUrl('images/header_banenr.png') }}">
+    <img src="{{ \App\Services\FileCacheService::getAssetUrl('images/header_banenr.png') }}" alt="Conference Background" class="w-full h-full object-cover object-center"
       style="background-size: cover; background-position: bottom; background-repeat: no-repeat;">
   </picture>
 
@@ -377,10 +377,10 @@
 
       if (width <= 640) {
         // Mobile
-        imageSrc = "{{ asset('images/header_banenr_mobile.png') }}";
+        imageSrc = "{{ \App\Services\FileCacheService::getAssetUrl('images/header_banenr_mobile.png') }}";
       } else {
         // Tablet
-        imageSrc = "{{ asset('images/header_banenr.png') }}";
+        imageSrc = "{{ \App\Services\FileCacheService::getAssetUrl('images/header_banenr.png') }}";
       }
 
       // Update the img src
