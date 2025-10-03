@@ -127,7 +127,7 @@ class ConferenceController extends Controller
                 [
                   'title' => '2. Toàn văn',
                   'icon' => 'shield',
-                  'url' => 'files/TCYHDP so 6PB_2025.pdf',
+                  'url' => 'files/TCYHDP so 6PB_20252.pdf',
                   'type' => 'file',
                 ],
               ]
