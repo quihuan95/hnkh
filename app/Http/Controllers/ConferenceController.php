@@ -121,7 +121,7 @@ class ConferenceController extends Controller
                 [
                   'title' => '1. Tóm tắt',
                   'icon' => 'shield',
-                  'url' => 'files/Tài liệu tóm tắt VAPM 1002 new.pdf',
+                  'url' => 'files/Tài liệu tóm tắt 1003.pdf',
                   'type' => 'file',
                 ],
                 [
@@ -185,13 +185,13 @@ class ConferenceController extends Controller
           'type' => 'silver'
         ],
         [
-          'logo' => 'images/logo/8 bạc.png',
+          'logo' => 'images/Logo Polyvac.png',
           'name' => 'Nhà tài trợ Bạc 2',
           'category' => 'Silver Sponsor',
           'type' => 'silver'
         ],
         [
-          'logo' => 'images/logo/9 bạc.png',
+          'logo' => 'images/Logo amv - png.png',
           'name' => 'Nhà tài trợ Bạc 3',
           'category' => 'Silver Sponsor',
           'type' => 'silver'
