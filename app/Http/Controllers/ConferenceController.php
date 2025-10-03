@@ -121,7 +121,7 @@ class ConferenceController extends Controller
                 [
                   'title' => '1. Tóm tắt',
                   'icon' => 'shield',
-                  'url' => 'files/Tài liệu tóm tắt VAPM 0929-3.pdf',
+                  'url' => 'files/Tài liệu tóm tắt VAPM 1002 new.pdf',
                   'type' => 'file',
                 ],
                 [
